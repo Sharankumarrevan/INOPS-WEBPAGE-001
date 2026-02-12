@@ -8225,16 +8225,33 @@ h6 .wpb_text_column p {
 	background-position: center center;
 }
 
-/* Skills section */
+/* Skills section  */
 .skills_bg_1 {
-	background-image: url(../images/bg.png);
-	background-size: cover;
-	background-position: center;
+    position: relative;
+    	background-image: url(../images/bg.png);
 }
+
+.skills_bg_1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.38); /* Adjust 0.4 to 0.6 */
+    z-index: 1;
+}
+
+/* Make content appear above overlay */
+.skills_bg_1 .content_wrap {
+    position: relative;
+    z-index: 2;
+}
+
 
 /* Page Shortcodes */
 .top_panel_image.top_panel_image_1{
-	background-image: url(../images/1920x479.jpg);
+	background-image: url(../images/aus.png);
 	background-size: cover;
 	background-position: center;
 }
