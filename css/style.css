@@ -8586,3 +8586,35 @@ html, body {
 #loadMoreServices:hover {
     cursor: pointer !important;
 }
+
+/* MOBILE HEADER FIX */
+@media (max-width: 768px) {
+
+    .top_panel_wrap {
+        position: relative;
+    }
+
+    .top_panel_middle {
+        padding: 5px 0 !important;
+    }
+
+    .top_panel_wrap .logo {
+        margin: 0 !important;
+        max-height: 50px;
+    }
+
+    .top_panel_wrap .logo img {
+        max-height: 45px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .rev_slider_wrapper,
+    .slider_wrap,
+    .fullscreen-container {
+        height: 65vh !important;
+    }
+
+}
