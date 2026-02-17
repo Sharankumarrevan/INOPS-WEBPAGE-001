@@ -8845,3 +8845,45 @@ html, body {
 }
 
 }
+
+/* ========================================
+   MOBILE HEADER HEIGHT FIX (FINAL)
+   ======================================== */
+@media (max-width: 768px){
+
+/* reduce full header height */
+.top_panel_wrap {
+    position: absolute !important;
+    height: auto !important;
+}
+
+/* remove large spacing container */
+.top_panel_middle .content_wrap {
+    padding: 0 !important;
+    min-height: 60px !important;
+}
+
+/* shrink logo container */
+.top_panel_middle .logo {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* shrink logo image */
+.top_panel_middle .logo img {
+    max-height: 45px !important;
+    width: auto !important;
+}
+
+/* remove extra empty header space */
+.top_panel_middle {
+    padding: 5px 0 !important;
+    min-height: auto !important;
+}
+
+/* bring slider up */
+.rev_slider_wrapper {
+    margin-top: 0 !important;
+}
+
+}
