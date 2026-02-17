@@ -9019,4 +9019,44 @@ html, body {
     overflow: visible !important;
 }
 
+/* ======================================
+   FINAL NO-HORIZONTAL-SCROLL FIX
+   (Works even when zooming)
+   ====================================== */
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+/* stop elements using 100vw */
+* {
+    max-width: 100%;
+}
+
+/* fix revolution slider width */
+.rev_slider_wrapper,
+.rev_slider,
+.fullscreen-container,
+.slider_wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* fix rows using negative margins */
+.vc_row,
+.sc_section {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* keep menu dropdown working */
+.top_panel_wrap,
+.top_panel_middle,
+.menu_main_wrap {
+    overflow: visible !important;
+}
 
