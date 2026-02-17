@@ -8887,3 +8887,41 @@ html, body {
 }
 
 }
+
+/* ===================================
+   REVOLUTION SLIDER LOGO MOBILE FIX
+   =================================== */
+@media (max-width: 768px){
+
+/* target slider logo layer */
+.rev_slider_wrapper img,
+.tp-caption img {
+    max-width: 180px !important;
+    height: auto !important;
+}
+
+/* reduce slider layer spacing */
+.tp-caption {
+    transform: scale(0.65) !important;
+    transform-origin: center top !important;
+}
+
+}
+
+@media (max-width: 768px){
+
+/* shrink revolution slider layers */
+.tp-caption,
+.tp-caption img,
+.rev_slider_wrapper img {
+    transform: scale(0.60) !important;
+    transform-origin: center top !important;
+}
+
+/* ensure slider fits screen */
+.rev_slider_wrapper,
+.fullscreen-container {
+    height: 100vh !important;
+}
+
+}
