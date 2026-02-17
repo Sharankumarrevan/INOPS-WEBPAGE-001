@@ -1,0 +1,34 @@
+.top_panel_image {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glass overlay */
+.top_panel_image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 40, 85, 0.45);   /* Dark blue glass tint */
+    backdrop-filter: blur(6px);          /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 1;
+}
+
+.top_panel_image_title {
+    position: relative;
+    z-index: 2;
+    font-weight: 800;      /* Extra bold */
+    color: #ffffff;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.6);
+}
+
+.breadcrumbs {
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.breadcrumbs a {
+    color: #ffffff !important;
+}

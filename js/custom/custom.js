@@ -1075,3 +1075,23 @@ var booked_js_vars = {
     "i18n_guest_appt_required_fields": "Please enter your name to book an appointment.",
     "i18n_appt_required_fields": "Please enter your name, your email address and choose a password to book an appointment."
 };
+
+/* INOPS - Toggle Services */
+
+jQuery(document).ready(function ($) {
+
+    $("#loadMoreServices").on("click", function () {
+
+        $("#moreServices").slideToggle(600);
+
+        // change button text
+        if ($(this).text() == "Read More Services") {
+            $(this).text("Show More");
+        } else {
+            $(this).text("Read More Services");
+        }
+
+    });
+
+});
+

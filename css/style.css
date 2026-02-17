@@ -2031,7 +2031,7 @@ label.required:after {
 .slider_boxed,
 .content_wrap,
 .content_container {
-    width: 1170px;
+    width: 1400px;
     margin: 0 auto;
 }
 .content_wrap:after,
@@ -2247,10 +2247,11 @@ body:not(.top_panel_fixed) .top_panel_style_3.boxed_style .top_panel_middle {
 .top_panel_style_7 .top_panel_top .content_wrap,
 .top_panel_style_4 .top_panel_top .content_wrap {
     box-sizing: border-box;
-    padding: 0 30px;
+    padding: 0 10px;   
     width: 100%;
-    line-height: 2em;
+    line-height: 1.2em;   
 }
+
 .top_panel_top {
     font-size: 13px;
     height: 4.25em;
@@ -2376,7 +2377,7 @@ body:not(.top_panel_fixed) .top_panel_style_3.boxed_style .top_panel_middle {
 .top_panel_style_7 .top_panel_middle .content_wrap,
 .top_panel_style_4 .top_panel_middle .content_wrap {
     box-sizing: border-box;
-    padding: 0 30px;
+    padding: 0 10px;
     width: 100%;
 }
 .menu_user_nav>li {
@@ -3010,7 +3011,6 @@ body:not(.top_panel_fixed) .top_panel_style_3.boxed_style .top_panel_middle {
     border-radius: 1.15em;
 }
 .top_panel_wrap .logo {
-    margin: 2em 0 1em 0;
     overflow: hidden;
 }
 .top_panel_wrap .logo_main {
@@ -3075,7 +3075,7 @@ body:not(.top_panel_fixed) .top_panel_style_3.boxed_style .top_panel_middle {
     float: right;
 }
 .top_panel_image {
-    height: 34em;
+    height: 38em;
     overflow: hidden;
     position: relative;
     background-size: cover;
@@ -3633,7 +3633,7 @@ body .top_panel_wrap .top_panel_middle .search_style_fullscreen .search_field:fo
     transform: translateX(-50%) translateY(-50%);
 }
 .top_panel_style_8 .top_panel_middle .logo {
-    margin: 0.5em 0 0 0;
+  margin: 0.5em 0 0 0; 
 }
 .top_panel_style_8 .menu_pushy_button {
     display: inline-block;
@@ -8379,133 +8379,210 @@ footer img {
 .sc_skills_total {
     font-weight: 700 !important;
     font-size: 34px;
-    color: #0d1b2a !important;   /* deep professional navy */
+    color: #ffffff !important;   /* deep professional navy */
 }
 
 .sc_skills_label {
     font-weight: 600 !important;
-    color: #302e2e !important;
+    color: #ffffff !important;
 }
 
-/* ===============================
-   LOGO SLIDER BASE
-================================ */
+.client-slider-section {
+    padding: 35px 0;
+    background: #f4f6f8;
+    overflow: hidden;
+}
 
-.inops-logo-slider {
-    position: relative;
+.client-slider {
     width: 100%;
     overflow: hidden;
-    background: #ffffff;
-    padding: 50px 0;
 }
 
-.inops-logo-track {
+.client-track {
     display: flex;
-    align-items: center;
-    gap: 60px;
+    gap: 30px;
     width: max-content;
-    animation: inops-scroll 10s linear infinite;
+    animation: slideClients 35s linear infinite;
 }
 
-/* Smooth infinite scroll */
-@keyframes inops-scroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-}
-
-.inops-logo-card {
-    flex: 0 0 auto;
+.client-card {
+    background: #cfe4e3;  /* light teal */
+    width: 260px;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
-}
-
-.inops-logo-card img {
-    max-height: 45px;
-    width: auto;
-    object-fit: contain;
-    opacity: 0.75;
+    border-radius: 6px;
     transition: all 0.3s ease;
 }
 
-.inops-logo-card img:hover {
-    opacity: 1;
-    transform: scale(1.05);
+.client-card img {
+    max-height: 80px;
+    max-width: 80%;
+    object-fit: contain;
 }
 
-/* slider logo */
-/* Fade edges */
-.inops-fade {
+/* Hover effect */
+.client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Smooth infinite animation */
+@keyframes slideClients {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover */
+.client-slider:hover .client-track {
+    animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .client-card {
+        width: 220px;
+        height: 110px;
+    }
+
+    .client-card img {
+        max-height: 45px;
+    }
+}
+
+/* location */
+.top_panel_wrap .top_panel_top_contact_area a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 1.6;   /* proper default */
+}
+
+/* Proper menu line spacing */
+.top_panel_style_7 .menu_main_nav > li > a {
+    line-height: 1.4 !important;
+}
+
+/* ===== EQUAL CARD SIZE ===== */
+
+/* Make card full height */
+.inops-services-section .sc_services_item {
+    display: flex;
+    flex-direction: column;
+    height: 420px;   /* main card height (adjust if needed) */
+}
+
+/* FIX IMAGE AREA HEIGHT */
+.inops-services-section .top_post_image {
+    height: 220px;        /* same image space for all cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6f8fb;
+    margin-top: 25px;
+}
+
+/* Keep image centered & not stretched */
+.inops-services-section .services-post-image {
+    max-height: 170px;
+    width: auto;
+}
+
+/* FIX CONTENT AREA HEIGHT */
+.inops-services-section .sc_services_item_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap : 12px;
+    text-align: center;
+}
+
+/* Limit description lines so cards stay equal */
+.inops-services-section .sc_services_item_description p {
+    min-height: 72px;
+}
+ 
+/* Smooth animation */
+.inops-services-section .sc_services_item {
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+/* Gradient overlay layer */
+.inops-services-section .sc_services_item::before {
+    content: "";
     position: absolute;
-    top: 0;
-    width: 120px;
-    height: 100%;
-    pointer-events: none;
+    inset: 0;
+    background: linear-gradient(135deg,#ffffff,#ffffff);
+    opacity: 0;
+    transition: 0.4s ease;
+    z-index: 0;
+}
+
+/* Lift + glow */
+.inops-services-section .sc_services_item:hover {
+    transform: translateY(-14px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+
+/* Show gradient overlay */
+.inops-services-section .sc_services_item:hover::before {
+    opacity: 0.08;
+}
+
+/* Make content above overlay */
+.inops-services-section .sc_services_item * {
+    position: relative;
     z-index: 2;
 }
 
-.inops-fade-left {
-    left: 0;
-    background: linear-gradient(to right, #ffffff 0%, transparent 100%);
+/* Title color animation */
+.inops-services-section .sc_services_item_title a {
+    transition: 0.3s;
 }
 
-.inops-fade-right {
-    right: 0;
-    background: linear-gradient(to left, #ffffff 0%, transparent 100%);
+.inops-services-section .sc_services_item:hover .sc_services_item_title a {
+    color: #171515;
 }
 
-/* ===============================
-   TABLET VIEW
-================================ */
-@media (max-width: 992px) {
-    .inops-logo-track {
-        gap: 40px;
-        animation-duration: 20s;
-    }
-
-    .inops-logo-card img {
-        max-height: 40px;
-    }
+/* Subtitle highlight */
+.inops-services-section .sc_services_item:hover .sc_services_item_subtitle {
+    color: #242020;
 }
 
-/* ===============================
-   MOBILE VIEW
-================================ */
-@media (max-width: 768px) {
-    .inops-logo-slider {
-        padding: 30px 0;
-    }
-
-    .inops-logo-track {
-        gap: 30px;
-        animation-duration: 18s;
-    }
-
-    .inops-logo-card {
-        height: 95px;
-    }
-
-    .inops-logo-card img {
-        max-height: 65px;
-    }
-
-    /* Reduce fade size on mobile */
-    .inops-fade {
-        width: 60px;
-    }
+/* Image floating effect */
+.inops-services-section .sc_services_item:hover .services-post-image {
+    transform: scale(1.1) translateY(-6px);
 }
 
-/* ===============================
-   SMALL MOBILE
-================================ */
-@media (max-width: 480px) {
-    .inops-logo-track {
-        gap: 20px;
-        animation-duration: 15s;
-    }
+/* Add bottom glow line */
+.inops-services-section .sc_services_item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg,#242323, #1c1b1b);
+    transition: 0.4s;
+    transform: translateX(-50%);
+}
 
-    .inops-logo-card img {
-        max-height: 80px;
-    }
+.inops-services-section .sc_services_item:hover::after {
+    width: 80%;
+}
+
+/* Pointer hand on hover for Read More Services button */
+#loadMoreServices:hover {
+    cursor: pointer !important;
 }
