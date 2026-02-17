@@ -8949,3 +8949,33 @@ html, body {
 .tp-revslider-slidesli {
     transform: none !important;
 }
+
+/* ======================================
+   STOP REVOLUTION SLIDER AUTO RESIZING
+   ====================================== */
+
+/* disable auto-resize engine */
+.tp-resizeme {
+    transform: none !important;
+}
+
+/* freeze the logo text layer size */
+.tp-caption.trx-big-dark {
+    font-size: 70px !important;
+    line-height: 70px !important;
+    transform: none !important;
+}
+
+/* freeze the logo image */
+.tp-caption.trx-big-dark img {
+    width: 320px !important;
+    max-width: 320px !important;
+    height: auto !important;
+    transform: none !important;
+}
+
+/* prevent slider from recalculating layer scale */
+.tp-loop-wrap,
+.tp-mask-wrap {
+    transform: none !important;
+}
