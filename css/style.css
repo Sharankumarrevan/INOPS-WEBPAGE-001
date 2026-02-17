@@ -8996,5 +8996,27 @@ html, body {
 }
 }
 
+/* ===================================
+   ALLOW MENU DROPDOWN TO OVERFLOW
+   =================================== */
+
+/* allow header to show dropdown */
+.top_panel_wrap,
+.top_panel_middle,
+.menu_main_wrap {
+    overflow: visible !important;
+}
+
+/* allow dropdown submenu */
+.menu_main_nav > li ul {
+    overflow: visible !important;
+    position: absolute !important;
+    z-index: 9999 !important;
+}
+
+/* prevent clipping inside header containers */
+.top_panel_wrap * {
+    overflow: visible !important;
+}
 
 
