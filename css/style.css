@@ -8925,3 +8925,27 @@ html, body {
 }
 
 }
+
+/* =========================================
+   FREEZE REVOLUTION SLIDER LOGO SIZE
+   ========================================= */
+
+/* stop slider auto scaling */
+.tp-caption img,
+.rev_slider_wrapper img.logo_main {
+    transform: none !important;
+    scale: 1 !important;
+}
+
+/* give fixed size to logo inside slider */
+.tp-caption img,
+.rev_slider_wrapper .logo_main {
+    width: 320px !important;
+    max-width: 320px !important;
+    height: auto !important;
+}
+
+/* prevent responsive engine from resizing layer */
+.tp-revslider-slidesli {
+    transform: none !important;
+}
