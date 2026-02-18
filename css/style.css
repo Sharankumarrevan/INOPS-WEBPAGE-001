@@ -9250,46 +9250,53 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================================
-   HERO IMAGE PERFECT CENTER (REV SLIDER)
-   ========================================= */
+/* =====================================================
+   REVOLUTION SLIDER — FORCE FULL CENTER IMAGE (WORKS)
+   ===================================================== */
 
-/* background images inside slider */
+/* main slider container */
 .rev_slider_wrapper,
 .rev_slider,
-.rev_slider ul li {
-    background-position: center center !important;
-    background-size: cover !important;
-}
-
-/* if slider uses <img> */
-.rev_slider_wrapper img,
-.tp-bgimg {
+.rev_slider > ul,
+.rev_slider > ul > li {
     width: 100% !important;
     height: 100vh !important;
-    object-fit: cover !important;
-    object-position: center center !important;
+    overflow: hidden !important;
 }
 
-/* mobile extra centering */
+/* THIS is the real background image layer */
+.rev_slider .tp-bgimg.defaultimg {
+    width: 100% !important;
+    height: 100% !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    transform: none !important;
+}
+
+/* remove RevSlider weird scaling */
+.rev_slider .tp-bgimg {
+    transform: none !important;
+}
+
+/* mobile — shift image slightly so worker becomes visible */
 @media (max-width:768px){
-    .rev_slider_wrapper img,
-    .tp-bgimg{
-        object-position: 60% center !important;
-        /* moves worker slightly into center */
+    .rev_slider .tp-bgimg.defaultimg {
+        background-position: 60% center !important;
     }
 }
 
-
-/* =========================================
-   HERO BUTTON SIZE NORMALIZATION
-   ========================================= */
+/* =====================================================
+   HERO BUTTON SAME WIDTH FIX
+   ===================================================== */
 
 .rev_slider .rev-btn,
 .rev_slider .sc_button {
-    padding: 14px 28px !important;
-    font-size: 16px !important;
-    border-radius: 28px !important;
-    min-width: 170px !important;
+    min-width: 180px !important;
     text-align: center !important;
+    padding: 14px 26px !important;
+    font-size: 16px !important;
+    border-radius: 30px !important;
 }
