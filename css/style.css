@@ -9112,9 +9112,9 @@ html, body {
 }
 
 /* prevent clipping inside header containers */
-.top_panel_wrap * {
+/* .top_panel_wrap * {
     overflow: visible !important;
-}
+} */
 
 /* ======================================
    HARD LOCK PAGE WIDTH (ZOOM SAFE)
@@ -9165,3 +9165,85 @@ html, body {
 
 }
 
+/* =====================================
+   MOBILE MENU FIX (FINAL)
+   ===================================== */
+@media (max-width:768px){
+
+/* make mobile menu full screen */
+.menu_mobile {
+    width:100% !important;
+    left:0 !important;
+}
+
+/* remove desktop mega menu behaviour */
+.menu_mobile .menu_main_nav > li > ul{
+    position:relative !important;
+    width:100% !important;
+    left:0 !important;
+    top:0 !important;
+    box-shadow:none !important;
+    background:rgba(0,0,0,0.15) !important;
+    padding-left:15px !important;
+}
+
+/* fix submenu spacing */
+.menu_mobile .menu_main_nav li ul li a{
+    font-size:16px !important;
+    padding:10px 0 !important;
+}
+
+/* remove dark block overlay behind submenu */
+.menu_mobile .menu_main_nav > li{
+    background:none !important;
+}
+
+/* fix search box width */
+.menu_mobile .search_wrap{
+    width:100% !important;
+}
+
+/* fix mobile menu scroll */
+.menu_mobile_inner{
+    overflow-y:auto !important;
+    height:100vh !important;
+}
+
+}
+
+/* ===================================
+   MOBILE HEADER LOGO FINAL FIX
+   =================================== */
+@media (max-width:768px){
+
+/* shrink logo size */
+.top_panel_wrap .logo_main,
+.top_panel_wrap .logo_fixed{
+    max-height:32px !important;
+    width:auto !important;
+}
+
+/* remove extra container spacing */
+.top_panel_middle .content_wrap{
+    padding-left:10px !important;
+    padding-right:10px !important;
+}
+
+/* move logo slightly left */
+.top_panel_middle .logo{
+    margin-left:-5px !important;
+    padding:5px 0 !important;
+}
+
+/* keep header compact */
+.top_panel_middle{
+    min-height:55px !important;
+}
+
+/* align hamburger + cart nicely */
+.menu_button,
+.top_panel_middle .menu_main_cart{
+    margin-top:5px !important;
+}
+
+}
