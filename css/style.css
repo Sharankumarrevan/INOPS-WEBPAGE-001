@@ -9209,3 +9209,41 @@ html, body {
     }
 
 }
+
+/* ===================================
+   FOOTER LAYOUT RESTORE
+   =================================== */
+
+/* bring back container width only inside footer */
+.footer_wrap .content_wrap{
+    max-width:1170px;
+    margin:0 auto;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+/* restore footer columns spacing */
+.footer_wrap .columns_wrap > div{
+    padding-left:15px;
+    padding-right:15px;
+}
+
+/* fix footer recent posts alignment */
+.footer_wrap .post_item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* fix footer form width */
+.footer_wrap .sc_form input,
+.footer_wrap .sc_form textarea{
+    width:100%;
+}
+
+/* mobile footer center alignment */
+@media (max-width:768px){
+    .footer_wrap{
+        text-align:center;
+    }
+}
