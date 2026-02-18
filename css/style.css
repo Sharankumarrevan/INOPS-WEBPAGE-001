@@ -8888,112 +8888,280 @@ html, body {
 
 }
 
-//* =====================================================
-   FINAL MOBILE RESPONSIVE FIX (CLEAN VERSION)
-   ===================================================== */
-
-/* ---------- MOBILE HEADER ---------- */
-@media (max-width:768px){
-
-.top_panel_top{
-    display:none !important;
+/* ===== HEADER ===== */
+.top_panel_wrap {
+    position: absolute !important;
+    width: 100%;
+    z-index: 1000;
 }
 
-.top_panel_middle{
-    padding:5px 0 !important;
+.top_panel_top {
+    display: none !important; /* hide top info bar on mobile */
 }
 
-.top_panel_wrap .logo img{
-    max-height:45px !important;
+.top_panel_middle {
+    padding: 8px 0 !important;
 }
 
+.top_panel_wrap .logo img {
+    max-height: 45px !important;
 }
 
-/* ---------- MOBILE HERO / SLIDER ---------- */
-@media (max-width:768px){
-
+/* ===== HERO / SLIDER FULLSCREEN ===== */
 .rev_slider_wrapper,
 .slider_wrap,
 .fullscreen-container,
-.top_panel_image{
-    height:100vh !important;
-    min-height:100vh !important;
+.top_panel_image {
+    height: 100vh !important;
+    min-height: 100vh !important;
 }
 
+.rev_slider_wrapper img,
+.top_panel_image img {
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+}
+
+/* hero text spacing */
 .tp-caption h1,
-.tp-caption .title{
-    font-size:34px !important;
-    line-height:38px !important;
+.top_panel_image_title {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+    padding: 0 20px !important;
 }
 
-.tp-caption p{
-    font-size:16px !important;
-    line-height:24px !important;
+.tp-caption p {
+    font-size: 14px !important;
 }
 
+/* ===== BUTTONS ===== */
+.sc_button {
+    padding: 12px 24px !important;
+    font-size: 14px !important;
+}
+
+/* ===== LOGO SLIDER ===== */
+.client-card {
+    width: 220px !important;
+    height: 110px !important;
+}
+
+.client-card img {
+    width: 140px !important;
+    max-height: 70px !important;
+}
+
+/* ===== SECTIONS SPACING ===== */
+.sc_section,
+.content_wrap {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* ===== BLOG / POSTS ===== */
+.post_featured img {
+    width: 100%;
+    height: auto;
+}
+
+/* ===== CONTACT FORM ===== */
+.sc_form input,
+.sc_form textarea {
+    width: 100% !important;
+}
+
+/* ===== FOOTER ===== */
+.footer_wrap {
+    text-align: center;
+}
+
+}
+
+/* ========================================
+   MOBILE HEADER HEIGHT FIX (FINAL)
+   ======================================== */
+@media (max-width: 768px){
+
+/* reduce full header height */
+.top_panel_wrap {
+    position: absolute !important;
+    height: auto !important;
+}
+
+/* remove large spacing container */
+.top_panel_middle .content_wrap {
+    padding: 0 !important;
+    min-height: 60px !important;
+}
+
+/* shrink logo container */
+.top_panel_middle .logo {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* shrink logo image */
+.top_panel_middle .logo img {
+    max-height: 45px !important;
+    width: auto !important;
+}
+
+/* remove extra empty header space */
+.top_panel_middle {
+    padding: 5px 0 !important;
+    min-height: auto !important;
+}
+
+/* bring slider up */
+.rev_slider_wrapper {
+    margin-top: 0 !important;
+}
+
+}
+
+/* ===================================
+   REVOLUTION SLIDER LOGO MOBILE FIX
+   =================================== */
+@media (max-width: 768px){
+
+/* target slider logo layer */
+.rev_slider_wrapper img,
+.tp-caption img {
+    max-width: 180px !important;
+    height: auto !important;
+}
+
+/* reduce slider layer spacing */
+.tp-caption {
+    transform: scale(0.65) !important;
+    transform-origin: center top !important;
+}
+
+}
+
+@media (max-width: 768px){
+
+/* shrink revolution slider layers */
+.tp-caption,
+.tp-caption img,
+.rev_slider_wrapper img {
+    transform: scale(0.60) !important;
+    transform-origin: center top !important;
+}
+
+/* ensure slider fits screen */
+.rev_slider_wrapper,
+.fullscreen-container {
+    height: 100vh !important;
+}
+
+}
+
+
+/* ===================================
+   MOBILE SLIDER TEXT SIZE FIX
+   =================================== */
+@media (max-width: 768px){
+
+/* main heading (big text) */
+.tp-caption h1,
+.tp-caption .title,
+.tp-caption .tp-resizeme {
+    font-size: 38px !important;
+    line-height: 35px !important;
+}
+
+/* subtitle / paragraph */
+.tp-caption p,
+.tp-caption .subtitle {
+    font-size: 20px !important;
+    line-height: 22px !important;
+}
+
+/* buttons */
 .tp-caption .sc_button,
-.tp-caption .rev-btn{
-    font-size:14px !important;
-    padding:10px 20px !important;
+.tp-caption .rev-btn {
+    font-size: 15px !important;
+    padding: 10px 18px !important;
 }
 
+/* spacing between elements */
+.tp-caption {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
 }
 
-/* ---------- DROPDOWN MENU FIX ---------- */
+/* ===================================
+   ALLOW MENU DROPDOWN TO OVERFLOW
+   =================================== */
+
+/* allow header to show dropdown */
 .top_panel_wrap,
 .top_panel_middle,
-.menu_main_wrap{
-    overflow:visible !important;
+.menu_main_wrap {
+    overflow: visible !important;
 }
 
-.menu_main_nav > li ul{
-    position:absolute !important;
-    z-index:9999 !important;
+/* allow dropdown submenu */
+.menu_main_nav > li ul {
+    overflow: visible !important;
+    position: absolute !important;
+    z-index: 9999 !important;
 }
 
-/* ---------- ⭐ MOST IMPORTANT: FIX ZOOM WHITE SPACE ---------- */
-@media (max-width:1024px){
-
-.content_wrap,
-.content_container,
-.slider_boxed{
-    width:100% !important;
-    max-width:100% !important;
-    padding-left:15px !important;
-    padding-right:15px !important;
+/* prevent clipping inside header containers */
+.top_panel_wrap * {
+    overflow: visible !important;
 }
 
-.vc_row{
-    margin-left:0 !important;
-    margin-right:0 !important;
+/* ======================================
+   HARD LOCK PAGE WIDTH (ZOOM SAFE)
+   ====================================== */
+
+html, body {
+    overflow-x: hidden !important;
 }
 
+/* stop elements from using 100vw */
+*[style*="100vw"],
+*[class*="full"],
+*[class*="stretch"] {
+    max-width: 100% !important;
+}
+
+/* fix revolution slider positioning */
 .rev_slider_wrapper,
 .rev_slider,
-.fullscreen-container{
-    width:100% !important;
-    max-width:100% !important;
+.fullscreen-container {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+}
+
+/* fix VC rows negative margins */
+.vc_row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* ===================================
+   MOBILE HEADER LOGO FIX
+   =================================== */
+@media (max-width: 768px){
+
+.top_panel_wrap .logo_main,
+.top_panel_wrap .logo_fixed {
+    max-height: 40px !important;
+    width: auto !important;
+}
+
+.top_panel_middle .logo {
+    margin: 0 !important;
+    padding: 5px 0 !important;
 }
 
 }
 
-/* =========================================
-   FIX BIG HERO LOGO (REV SLIDER MOBILE)
-   ========================================= */
-@media (max-width:768px){
-
-/* target ONLY slider image layers */
-.rev_slider_wrapper .tp-caption img,
-.rev_slider_wrapper .tp-layer img,
-.rev_slider_wrapper img.tp-rs-img{
-    width:140px !important;
-    max-width:40vw !important;
-    height:auto !important;
-}
-
-/* move logo a bit down */
-.rev_slider_wrapper .tp-caption{
-    margin-top:20px !important;
-}
-
-}
