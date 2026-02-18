@@ -9353,5 +9353,49 @@ body {
 
         background-repeat: no-repeat !important;
     }
-
 }
+
+
+/* ======================================
+   REDUCE HEADER HEIGHT (DESKTOP + MOBILE)
+   ====================================== */
+
+/* reduce header container height */
+.top_panel_middle {
+    padding: 6px 20px !important;   /* small vertical padding */
+    min-height: 60px !important;    /* reduce overall height */
+}
+
+/* reduce logo size slightly */
+.top_panel_middle .logo img,
+.top_panel_wrap .logo_main,
+.top_panel_wrap .logo_fixed {
+    max-height: 38px !important;
+    width: auto !important;
+}
+
+/* keep menu aligned vertically */
+.menu_main_wrap,
+.top_panel_middle .menu_main_cart,
+.menu_button {
+    line-height: 60px !important;
+}
+
+/* mobile even smaller */
+@media (max-width: 768px) {
+    .top_panel_middle {
+        padding: 5px 15px !important;
+        min-height: 50px !important;
+    }
+
+    .top_panel_middle .logo img {
+        max-height: 30px !important;
+    }
+
+    .menu_button,
+    .top_panel_middle .menu_main_cart {
+        line-height: 30px !important;
+    }
+}
+
+
