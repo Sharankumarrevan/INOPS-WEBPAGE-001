@@ -9272,7 +9272,7 @@ body {
     height: 100% !important;
 
     /* THIS reduces zoom */
-    background-size: 100% auto;
+    background-size: 115% auto;
     background-position: center center !important;
     background-repeat: no-repeat !important;
 
@@ -9340,4 +9340,32 @@ html, body,
 .vc_row:last-child {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
+}
+
+/* =========================================
+   REMOVE WHITE GAP ABOVE FOOTER (FINAL)
+   ========================================= */
+
+/* Remove unwanted spacing before footer */
+.footer_wrap {
+    margin-top: 0 !important;
+}
+
+/* Remove bottom margins from previous section */
+.footer_wrap.previous_section,
+.content_wrap:last-child,
+.sc_section:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Prevent body extra background strip */
+body {
+    background-color: #1e2127 !important; /* match footer dark color */
+}
+
+/* Remove accidental white block sections */
+section,
+.sc_section {
+    background-clip: padding-box;
 }
