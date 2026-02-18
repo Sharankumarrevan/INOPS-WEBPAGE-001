@@ -8641,7 +8641,7 @@ html, body {
     .rev_slider_wrapper,
     .fullscreen-container,
     .slider_wrap {
-        height: 100vh !important;
+        /* height: 100vh !important; */
         min-height: 100vh !important;
     }
 
@@ -8649,7 +8649,7 @@ html, body {
     .rev_slider_wrapper img,
     .fullscreen-container img {
         object-fit: cover !important;
-        height: 100vh !important;
+        /* height: 100vh !important; */
         width: 100% !important;
     }
 
@@ -8768,14 +8768,14 @@ html, body {
 .slider_wrap,
 .fullscreen-container,
 .top_panel_image {
-    height: 100vh !important;
+    /* height: 100vh !important; */
     min-height: 100vh !important;
 }
 
 .rev_slider_wrapper img,
 .top_panel_image img {
     width: 100% !important;
-    height: 100vh !important;
+    /* height: 100vh !important; */
     object-fit: cover !important;
 }
 
@@ -8888,14 +8888,14 @@ html, body {
 .slider_wrap,
 .fullscreen-container,
 .top_panel_image {
-    height: 100vh !important;
+    /* height: 100vh !important; */
     min-height: 100vh !important;
 }
 
 .rev_slider_wrapper img,
 .top_panel_image img {
     width: 100% !important;
-    height: 100vh !important;
+    /* height: 100vh !important; */
     object-fit: cover !important;
 }
 
@@ -9135,7 +9135,7 @@ html, body {
 /* If hero uses img tag */
 .slider_alias_home-2 img {
     width: 100% !important;
-    height: 100vh !important;
+    /* height: 100vh !important; */
     object-fit: cover !important;
     object-position: center center !important;
 }
@@ -9262,7 +9262,7 @@ body {
 .rev_slider > ul,
 .rev_slider > ul > li {
     width: 100% !important;
-    height: 100vh !important;
+    /* height: 100vh !important; */
     overflow: hidden !important;
 }
 
@@ -9399,34 +9399,86 @@ body {
 }
 
 
-/* =========================================
-   MOBILE HEADER ICON BALANCE FIX
-   ========================================= */
+/* =====================================
+   MOBILE HEADER ICON WIDTH FIX
+===================================== */
+
 @media (max-width:768px){
 
-/* Make both icon containers equal width */
-.menu_button,
-.top_panel_middle .menu_main_cart {
-    width: 44px !important;
-    height: 44px !important;
+    /* make both icons equal size */
+    .menu_button,
+    .top_panel_icon,
+    .menu_main_cart {
+        width: 44px !important;
+        height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* make icons centered */
+    .menu_button span,
+    .top_panel_icon i,
+    .menu_main_cart i {
+        font-size: 20px !important;
+    }
+}
+
+/* =====================================
+   REV SLIDER MOBILE FULL COVER FIX
+===================================== */
+
+@media (max-width:768px){
+
+    .rev_slider,
+    .rev_slider_wrapper,
+    .rev_slider ul li {
+        height: 100vh !important;
+    }
+
+    .rev_slider .tp-bgimg {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+}
+
+/* =====================================
+   HEADER HEIGHT & SPACING FIX
+   (Push slider content below header)
+===================================== */
+
+/* give header proper height */
+.top_panel_middle {
+    height: 90px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+/* center logo + menu vertically */
+.top_panel_middle .content_wrap {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    justify-content: space-between !important;
 }
 
-/* Make hamburger lines slightly thicker */
-.menu_button span,
-.menu_button:before,
-.menu_button:after {
-    transform: scale(1.1);
+/* move slider content below header */
+.rev_slider_wrapper {
+    margin-top: 90px !important;
 }
 
-/* Align cart badge properly */
-.menu_main_cart .contact_cart_label {
-    top: 2px !important;
-    right: 2px !important;
-}
+/* MOBILE VERSION */
+@media (max-width:768px){
+
+    .top_panel_middle {
+        height: 70px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .rev_slider_wrapper {
+        margin-top: 70px !important;
+    }
 
 }
