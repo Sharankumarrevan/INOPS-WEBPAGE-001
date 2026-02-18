@@ -9320,32 +9320,37 @@ body {
 
 
 /* =========================================
-   REMOVE EMPTY SPACE BELOW FOOTER (FINAL)
+   REMOVE EMPTY SPACE BELOW FOOTER — FINAL
    ========================================= */
 
-/* Remove forced page heights */
-html, body,
+/* remove extra height added by slider/pages */
 .page_wrap,
 .body_wrap,
 .content_wrap {
-    height: auto !important;
     min-height: auto !important;
+    height: auto !important;
 }
 
-/* Footer should sit right after content */
-.footer_wrap {
-    margin-top: 0 !important;
-    padding-bottom: 40px !important;
+/* remove bottom spacing from last section */
+.page_wrap > *:last-child,
+.content_wrap > *:last-child,
+.sc_section:last-of-type {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
-/* Remove hidden spacer divs from theme */
-.page_wrap::after,
-.body_wrap::after {
+/* kill hidden spacer blocks from theme */
+.sc_empty_space:last-child {
     display: none !important;
 }
 
-/* Fix VC rows causing extra bottom space */
-.vc_row:last-child {
+/* fix footer spacing */
+.footer_wrap {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
+}
+
+/* remove 100vh side effects from slider */
+.rev_slider_wrapper {
+    margin-bottom: 0 !important;
 }
