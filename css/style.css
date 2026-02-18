@@ -9121,45 +9121,6 @@ html, body {
 }
 
 /* =========================================
-   GLOBAL WIDTH LOCK (NO WHITE SPACE ISSUE)
-   ========================================= */
-
-/* Prevent horizontal scroll safely */
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Prevent 100vw overflow problems */
-.rev_slider_wrapper,
-.rev_slider,
-.fullscreen-container,
-.slider_wrap,
-.content_wrap,
-.page_wrap,
-.body_wrap {
-    width: 100% !important;
-    max-width: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-}
-
-/* Fix negative margin rows (Visual Composer etc.) */
-.vc_row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
-/* Keep dropdown working */
-.top_panel_wrap,
-.top_panel_middle,
-.menu_main_wrap {
-    overflow: visible !important;
-}
-
-
-
-/* =========================================
    HOME2 HERO IMAGE CENTER FIX
    ========================================= */
 
@@ -9246,4 +9207,45 @@ html, body {
     .footer_wrap{
         text-align:center;
     }
+}
+
+/* =========================================
+   FINAL REVOLUTION SLIDER WIDTH FIX
+   (Kills right white space permanently)
+   ========================================= */
+
+/* stop slider canvas from being wider than screen */
+.rev_slider_wrapper,
+.rev_slider,
+.rev_slider > ul,
+.rev_slider > ul > li,
+.tp-bgimg {
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* force slider container to use screen width only */
+.fullscreen-container {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* fix internal revolution slider transform overflow */
+.rev_slider_wrapper .tp-revslider-mainul {
+    transform: none !important;
+    left: 0 !important;
+}
+
+/* kill hidden overflow from theme rows */
+.vc_row,
+.content_wrap {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* final safety */
+body {
+    overflow-x: hidden;
 }
