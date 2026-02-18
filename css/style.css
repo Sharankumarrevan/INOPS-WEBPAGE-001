@@ -8692,7 +8692,7 @@ html, body {
 
 /* FORCE location link BLACK */
 .scheme_original .top_panel_top .top_panel_top_contact_area a {
-    color: #b7b0b0 !important;
+    color: #8b8484 !important;
     opacity: 1 !important;
 }
 
@@ -8926,41 +8926,6 @@ html, body {
 
 }
 
-/* =========================================
-   FREEZE REVOLUTION SLIDER LOGO SIZE
-   ========================================= */
-
-/* stop slider auto scaling */
-.tp-caption img,
-.rev_slider_wrapper img.logo_main {
-    transform: none !important;
-    scale: 1 !important;
-}
-
-/* give fixed size to logo inside slider */
-.tp-caption img,
-.rev_slider_wrapper .logo_main {
-    width: 320px !important;
-    max-width: 320px !important;
-    height: auto !important;
-}
-
-/* prevent responsive engine from resizing layer */
-.tp-revslider-slidesli {
-    transform: none !important;
-}
-
-/* =====================================
-   FREEZE ONLY LOGO LAYER (NOT TEXT)
-   ===================================== */
-
-/* target ONLY the logo image inside slider */
-.tp-caption img[src*="InOps_Logo"] {
-    width: 320px !important;
-    max-width: 320px !important;
-    height: auto !important;
-    transform: none !important;
-}
 
 /* ===================================
    MOBILE SLIDER TEXT SIZE FIX
@@ -9017,6 +8982,55 @@ html, body {
 /* prevent clipping inside header containers */
 .top_panel_wrap * {
     overflow: visible !important;
+}
+
+/* ======================================
+   HARD LOCK PAGE WIDTH (ZOOM SAFE)
+   ====================================== */
+
+html, body {
+    overflow-x: hidden !important;
+}
+
+/* stop elements from using 100vw */
+*[style*="100vw"],
+*[class*="full"],
+*[class*="stretch"] {
+    max-width: 100% !important;
+}
+
+/* fix revolution slider positioning */
+.rev_slider_wrapper,
+.rev_slider,
+.fullscreen-container {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+}
+
+/* fix VC rows negative margins */
+.vc_row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* ===================================
+   MOBILE HEADER LOGO FIX
+   =================================== */
+@media (max-width: 768px){
+
+.top_panel_wrap .logo_main,
+.top_panel_wrap .logo_fixed {
+    max-height: 40px !important;
+    width: auto !important;
+}
+
+.top_panel_middle .logo {
+    margin: 0 !important;
+    padding: 5px 0 !important;
+}
+
 }
 
 
