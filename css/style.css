@@ -9328,3 +9328,30 @@ body {
 }
 
 
+/* =====================================================
+   MOBILE HERO IMAGE FIX (REVOLUTION SLIDER ONLY)
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* reduce hero height slightly on mobile */
+    .rev_slider_wrapper,
+    .rev_slider,
+    .rev_slider > ul,
+    .rev_slider > ul > li {
+        height: 85vh !important;
+    }
+
+    /* target actual background layer */
+    .rev_slider .tp-bgimg.defaultimg {
+
+        background-size: contain !important;
+        /* shows more of image (zoomed-out effect) */
+
+        background-position: center center !important;
+        /* keeps subject centered */
+
+        background-repeat: no-repeat !important;
+    }
+
+}
