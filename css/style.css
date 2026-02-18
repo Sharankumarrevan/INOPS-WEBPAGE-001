@@ -9249,3 +9249,47 @@ html, body {
 body {
     overflow-x: hidden;
 }
+
+/* =========================================
+   HERO IMAGE PERFECT CENTER (REV SLIDER)
+   ========================================= */
+
+/* background images inside slider */
+.rev_slider_wrapper,
+.rev_slider,
+.rev_slider ul li {
+    background-position: center center !important;
+    background-size: cover !important;
+}
+
+/* if slider uses <img> */
+.rev_slider_wrapper img,
+.tp-bgimg {
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+}
+
+/* mobile extra centering */
+@media (max-width:768px){
+    .rev_slider_wrapper img,
+    .tp-bgimg{
+        object-position: 60% center !important;
+        /* moves worker slightly into center */
+    }
+}
+
+
+/* =========================================
+   HERO BUTTON SIZE NORMALIZATION
+   ========================================= */
+
+.rev_slider .rev-btn,
+.rev_slider .sc_button {
+    padding: 14px 28px !important;
+    font-size: 16px !important;
+    border-radius: 28px !important;
+    min-width: 170px !important;
+    text-align: center !important;
+}

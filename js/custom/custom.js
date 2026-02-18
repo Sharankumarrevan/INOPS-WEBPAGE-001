@@ -1082,16 +1082,14 @@ jQuery(document).ready(function ($) {
 
     $("#loadMoreServices").on("click", function () {
 
-        $("#moreServices").slideToggle(600);
+        // show hidden services
+        $("#moreServices").slideDown(600);
 
-        // change button text
-        if ($(this).text() == "Read More Services") {
-            $(this).text("Show More");
-        } else {
-            $(this).text("Read More Services");
-        }
+        // hide button smoothly
+        $("#servicesBtnWrap").fadeOut(300);
 
     });
 
 });
+
 
