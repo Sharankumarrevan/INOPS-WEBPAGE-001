@@ -8976,3 +8976,24 @@ html, body {
 }
 
 }
+
+/* =========================================
+   FIX BIG HERO LOGO (REV SLIDER MOBILE)
+   ========================================= */
+@media (max-width:768px){
+
+/* target ONLY slider image layers */
+.rev_slider_wrapper .tp-caption img,
+.rev_slider_wrapper .tp-layer img,
+.rev_slider_wrapper img.tp-rs-img{
+    width:140px !important;
+    max-width:40vw !important;
+    height:auto !important;
+}
+
+/* move logo a bit down */
+.rev_slider_wrapper .tp-caption{
+    margin-top:20px !important;
+}
+
+}
