@@ -9287,7 +9287,7 @@ body {
 /* MOBILE — adjust position slightly */
 @media (max-width:768px){
     .rev_slider .tp-bgimg.defaultimg {
-        background-size: 110% auto;
+        background-size: contain !important;
         background-position: center center !important;
     }
 }
