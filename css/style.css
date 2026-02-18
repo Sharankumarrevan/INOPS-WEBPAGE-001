@@ -9399,3 +9399,34 @@ body {
 }
 
 
+/* =========================================
+   MOBILE HEADER ICON BALANCE FIX
+   ========================================= */
+@media (max-width:768px){
+
+/* Make both icon containers equal width */
+.menu_button,
+.top_panel_middle .menu_main_cart {
+    width: 44px !important;
+    height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Make hamburger lines slightly thicker */
+.menu_button span,
+.menu_button:before,
+.menu_button:after {
+    transform: scale(1.1);
+}
+
+/* Align cart badge properly */
+.menu_main_cart .contact_cart_label {
+    top: 2px !important;
+    right: 2px !important;
+}
+
+}
