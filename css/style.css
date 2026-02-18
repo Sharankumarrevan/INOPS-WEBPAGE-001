@@ -9272,7 +9272,7 @@ body {
     height: 100% !important;
 
     /* THIS reduces zoom */
-    background-size: 110% auto;
+    background-size: 100% auto;
     background-position: center center !important;
     background-repeat: no-repeat !important;
 
@@ -9287,7 +9287,7 @@ body {
 /* MOBILE — adjust position slightly */
 @media (max-width:768px){
     .rev_slider .tp-bgimg.defaultimg {
-        background-size:contain !important;
+        background-size:cover !important;
         background-position: center center !important;
     }
 }
