@@ -9293,20 +9293,59 @@ body {
 }
 
 
-/* =====================================================
-   HERO BUTTON SAME WIDTH FIX
-   ===================================================== */
-.tp-caption.rev-btn,
-.rev_slider .tp-caption.rev-btn {
-    min-width: 190px !important;
-    padding: 14px 30px !important;
-    text-align: center !important;
+/* =========================================
+   REVOLUTION SLIDER BUTTON WIDTH — FINAL FIX
+   ========================================= */
+
+/* target REAL rev slider buttons */
+.rev_slider a.rev-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 190px !important;          /* SAME WIDTH */
+    height: 50px !important;
+    padding: 0 25px !important;
+
     font-size: 16px !important;
     border-radius: 30px !important;
+    text-align: center !important;
 }
 
-/* ensure both buttons look equal width */
-.rev_slider .tp-caption.rev-btn span {
-    display: inline-block;
-    width: 100%;
+/* remove RevSlider auto text sizing */
+.rev_slider a.rev-btn span {
+    width: auto !important;
+    white-space: nowrap !important;
+}
+
+
+/* =========================================
+   REMOVE EMPTY SPACE BELOW FOOTER (FINAL)
+   ========================================= */
+
+/* Remove forced page heights */
+html, body,
+.page_wrap,
+.body_wrap,
+.content_wrap {
+    height: auto !important;
+    min-height: auto !important;
+}
+
+/* Footer should sit right after content */
+.footer_wrap {
+    margin-top: 0 !important;
+    padding-bottom: 40px !important;
+}
+
+/* Remove hidden spacer divs from theme */
+.page_wrap::after,
+.body_wrap::after {
+    display: none !important;
+}
+
+/* Fix VC rows causing extra bottom space */
+.vc_row:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
