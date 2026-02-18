@@ -9254,7 +9254,11 @@ body {
    REVOLUTION SLIDER — FORCE FULL CENTER IMAGE (WORKS)
    ===================================================== */
 
-/* main slider container */
+/* =====================================================
+   REVOLUTION SLIDER — LESS ZOOM / MORE IMAGE VISIBLE
+   ===================================================== */
+
+/* slider height */
 .rev_slider_wrapper,
 .rev_slider,
 .rev_slider > ul,
@@ -9264,39 +9268,47 @@ body {
     overflow: hidden !important;
 }
 
-/* THIS is the real background image layer */
+/* real background image layer */
 .rev_slider .tp-bgimg.defaultimg {
     width: 100% !important;
     height: 100% !important;
 
-    background-size: cover !important;
+    /* THIS reduces zoom */
+    background-size: contain !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
 
     transform: none !important;
 }
 
-/* remove RevSlider weird scaling */
-.rev_slider .tp-bgimg {
-    transform: none !important;
+/* add soft background color to fill empty sides */
+.rev_slider > ul > li {
+    background: #f5f7f9 !important;   /* light industrial grey */
 }
 
-/* mobile — shift image slightly so worker becomes visible */
+/* MOBILE — adjust position slightly */
 @media (max-width:768px){
     .rev_slider .tp-bgimg.defaultimg {
-        background-position: 60% center !important;
+        background-size: contain !important;
+        background-position: center center !important;
     }
 }
+
 
 /* =====================================================
    HERO BUTTON SAME WIDTH FIX
    ===================================================== */
-
-.rev_slider .rev-btn,
-.rev_slider .sc_button {
-    min-width: 180px !important;
+.tp-caption.rev-btn,
+.rev_slider .tp-caption.rev-btn {
+    min-width: 190px !important;
+    padding: 14px 30px !important;
     text-align: center !important;
-    padding: 14px 26px !important;
     font-size: 16px !important;
     border-radius: 30px !important;
+}
+
+/* ensure both buttons look equal width */
+.rev_slider .tp-caption.rev-btn span {
+    display: inline-block;
+    width: 100%;
 }
