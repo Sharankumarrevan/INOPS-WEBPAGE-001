@@ -9599,3 +9599,53 @@ body {
 .top_panel_middle .top_panel_icon{
     margin:0 !important;
 }
+
+/* =====================================================
+   MOBILE MENU FINAL SPACING + ALIGNMENT
+   ===================================================== */
+
+/* give breathing space to menu list */
+.menu_mobile .menu_main_nav{
+    padding-top:20px !important;
+}
+
+/* space between menu items */
+.menu_mobile .menu_main_nav > li{
+    padding:14px 25px !important;
+    border-bottom:1px solid rgba(255,255,255,0.08) !important;
+}
+
+/* make text clean and vertically centered */
+.menu_mobile .menu_main_nav > li > a{
+    font-size:16px !important;
+    letter-spacing:1px !important;
+    line-height:1.4 !important;
+}
+
+/* fix dropdown arrow alignment */
+.menu_mobile .menu_main_nav > li > a > .open_child_menu{
+    top:50% !important;
+    transform:translateY(-50%) !important;
+}
+
+/* spacing for login + register section */
+.menu_mobile .menu_mobile_widgets_area{
+    margin-top:25px !important;
+    padding-top:15px !important;
+    border-top:1px solid rgba(255,255,255,0.08) !important;
+}
+
+/* phone + time section spacing */
+.menu_mobile .menu_mobile_widgets_area .contact_field{
+    margin-top:18px !important;
+}
+
+/* bottom social bar spacing */
+.menu_mobile .socials_mobile{
+    padding:18px 0 !important;
+}
+
+/* make social icons evenly spaced */
+.menu_mobile .socials_mobile .sc_socials_item{
+    margin:0 12px !important;
+}
