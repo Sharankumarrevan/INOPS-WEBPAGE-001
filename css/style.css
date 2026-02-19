@@ -9292,7 +9292,68 @@ body {
     }
 }
 
+/* =========================================
+   MOBILE MENU — MAKE ALL DROPDOWNS FULL WIDTH
+   ========================================= */
+@media (max-width:768px){
 
+/* make mobile menu container full width */
+.menu_mobile{
+    width:100% !important;
+    left:0 !important;
+}
+
+/* make ALL submenu dropdowns full width */
+.menu_mobile .menu_main_nav > li > ul{
+    width:100% !important;
+    max-width:100% !important;
+    left:0 !important;
+    right:0 !important;
+    position:relative !important;
+    padding-left:20px !important;
+}
+
+/* remove desktop fixed widths */
+.menu_mobile .menu_main_nav > li > ul li{
+    width:100% !important;
+}
+
+/* make links fill row */
+.menu_mobile .menu_main_nav > li > ul li a{
+    width:100% !important;
+    display:block !important;
+    padding:12px 0 !important;
+}
+
+}
+
+
+/* =====================================================
+   MOBILE HERO IMAGE FIX (REVOLUTION SLIDER ONLY)
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* reduce hero height slightly on mobile */
+    .rev_slider_wrapper,
+    .rev_slider,
+    .rev_slider > ul,
+    .rev_slider > ul > li {
+        height: 85vh !important;
+    }
+
+    /* target actual background layer */
+    .rev_slider .tp-bgimg.defaultimg {
+
+        background-size: contain !important;
+        /* shows more of image (zoomed-out effect) */
+
+        background-position: center center !important;
+        /* keeps subject centered */
+
+        background-repeat: no-repeat !important;
+    }
+}
 
 
 /* ======================================
@@ -9508,66 +9569,61 @@ body {
 
 }
 
-/* =========================================
-   MOBILE MENU — MAKE ALL DROPDOWNS FULL WIDTH
-   ========================================= */
-@media (max-width:768px){
-
-/* make mobile menu container full width */
-.menu_mobile{
-    width:100% !important;
-    left:0 !important;
-}
-
-/* make ALL submenu dropdowns full width */
-.menu_mobile .menu_main_nav > li > ul{
-    width:100% !important;
-    max-width:100% !important;
-    left:0 !important;
-    right:0 !important;
-    position:relative !important;
-    padding-left:20px !important;
-}
-
-/* remove desktop fixed widths */
-.menu_mobile .menu_main_nav > li > ul li{
-    width:100% !important;
-}
-
-/* make links fill row */
-.menu_mobile .menu_main_nav > li > ul li a{
-    width:100% !important;
-    display:block !important;
-    padding:12px 0 !important;
-}
-
-}
-
-
 /* =====================================================
-   MOBILE HERO IMAGE FIX (REVOLUTION SLIDER ONLY)
+   PUSHY MOBILE MENU — CLEAN SPACING + ALIGNMENT
    ===================================================== */
 
-@media (max-width: 768px) {
-
-    /* reduce hero height slightly on mobile */
-    .rev_slider_wrapper,
-    .rev_slider,
-    .rev_slider > ul,
-    .rev_slider > ul > li {
-        height: 85vh !important;
-    }
-
-    /* target actual background layer */
-    .rev_slider .tp-bgimg.defaultimg {
-
-        background-size: contain !important;
-        /* shows more of image (zoomed-out effect) */
-
-        background-position: center center !important;
-        /* keeps subject centered */
-
-        background-repeat: no-repeat !important;
-    }
+/* remove cramped spacing from container */
+.menu_pushy{
+    padding-top:0 !important;
 }
+
+/* main menu items spacing */
+.menu_pushy .menu_pushy_inner .menu_main_nav > li{
+    padding:16px 0 !important;
+    border-bottom:1px solid rgba(255,255,255,0.06) !important;
+}
+
+/* menu text spacing */
+.menu_pushy .menu_main_nav > li > a{
+    font-size:18px !important;
+    letter-spacing:1px !important;
+    padding:6px 0 !important;
+}
+
+/* arrow alignment */
+.menu_pushy .menu_main_nav > li.menu-item-has-children > a:after{
+    right:0 !important;
+}
+
+/* space between menu and login/register section */
+.menu_pushy .menu_user_nav{
+    margin-top:25px !important;
+    padding-top:10px !important;
+    border-top:1px solid rgba(255,255,255,0.08) !important;
+}
+
+/* login & register spacing */
+.menu_pushy .menu_user_nav li{
+    padding:18px 0 !important;
+}
+
+/* phone + working hours block spacing */
+.menu_pushy .contact_field{
+    margin-top:25px !important;
+    padding-top:20px !important;
+    border-top:1px solid rgba(255,255,255,0.08) !important;
+}
+
+/* bottom social bar spacing */
+.menu_pushy .top_panel_top_socials{
+    margin-top:25px !important;
+}
+
+/* increase side padding so text not touching edge */
+.menu_pushy .menu_pushy_inner{
+    padding-left:28px !important;
+    padding-right:28px !important;
+}
+
 
