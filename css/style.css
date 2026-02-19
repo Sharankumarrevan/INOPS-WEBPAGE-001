@@ -9292,40 +9292,7 @@ body {
     }
 }
 
-/* =========================================
-   MOBILE MENU — MAKE ALL DROPDOWNS FULL WIDTH
-   ========================================= */
-@media (max-width:768px){
 
-/* make mobile menu container full width */
-.menu_mobile{
-    width:100% !important;
-    left:0 !important;
-}
-
-/* make ALL submenu dropdowns full width */
-.menu_mobile .menu_main_nav > li > ul{
-    width:100% !important;
-    max-width:100% !important;
-    left:0 !important;
-    right:0 !important;
-    position:relative !important;
-    padding-left:20px !important;
-}
-
-/* remove desktop fixed widths */
-.menu_mobile .menu_main_nav > li > ul li{
-    width:100% !important;
-}
-
-/* make links fill row */
-.menu_mobile .menu_main_nav > li > ul li a{
-    width:100% !important;
-    display:block !important;
-    padding:12px 0 !important;
-}
-
-}
 
 
 /* =====================================================
@@ -9503,7 +9470,6 @@ body {
 
 }
 
-
 /* =====================================================
    SOCIAL + SEARCH ICON SIZE = MENU HEIGHT FIX
    ===================================================== */
@@ -9571,28 +9537,39 @@ body {
 }
 
 
-/* =====================================================
-   REMOVE SEARCH FROM PUSHY MOBILE MENU (FINAL)
-   ===================================================== */
+/* =========================================
+   MOBILE MENU — MAKE ALL DROPDOWNS FULL WIDTH
+   ========================================= */
+@media (max-width:768px){
 
-/* hide search block inside pushy mobile menu */
-.menu_pushy .search_wrap,
-.menu_pushy .search_mobile,
-.menu_pushy .search_form,
-.menu_pushy input[type="search"],
-.menu_pushy .search_field,
-.menu_pushy .top_panel_icon.search_wrap{
-    display:none !important;
+/* make mobile menu container full width */
+.menu_mobile{
+    width:100% !important;
+    left:0 !important;
 }
 
-/* remove the grey bar space left behind */
-.menu_pushy .content_wrap{
-    padding-top:0 !important;
+/* make ALL submenu dropdowns full width */
+.menu_mobile .menu_main_nav > li > ul{
+    width:100% !important;
+    max-width:100% !important;
+    left:0 !important;
+    right:0 !important;
+    position:relative !important;
+    padding-left:20px !important;
 }
 
-/* remove any empty space above first menu item */
-.menu_pushy .menu_pushy_inner{
-    padding-top:0 !important;
-    margin-top:0 !important;
+/* remove desktop fixed widths */
+.menu_mobile .menu_main_nav > li > ul li{
+    width:100% !important;
 }
+
+/* make links fill row */
+.menu_mobile .menu_main_nav > li > ul li a{
+    width:100% !important;
+    display:block !important;
+    padding:12px 0 !important;
+}
+
+}
+
 
