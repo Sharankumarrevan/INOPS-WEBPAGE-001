@@ -9649,3 +9649,38 @@ body {
 .menu_mobile .socials_mobile .sc_socials_item{
     margin:0 12px !important;
 }
+
+
+/* =====================================================
+   REVOLUTION SLIDER FULL MOBILE HEIGHT FIX
+   ===================================================== */
+
+@media (max-width:768px){
+
+    /* make slider take full screen height */
+    .rev_slider,
+    .rev_slider_wrapper,
+    .fullscreen-container,
+    .fullwidthbanner-container{
+        height:100vh !important;
+        min-height:100vh !important;
+        max-height:100vh !important;
+    }
+
+    /* force slide background image to cover */
+    .rev_slider li,
+    .rev_slider .slotholder,
+    .rev_slider .tp-bgimg{
+        height:100vh !important;
+        min-height:100vh !important;
+        background-size:cover !important;
+        background-position:center center !important;
+    }
+
+    /* remove grey spacing below slider */
+    .rev_slider_wrapper{
+        margin-bottom:0 !important;
+        padding-bottom:0 !important;
+    }
+
+}
