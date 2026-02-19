@@ -9570,70 +9570,32 @@ body {
 }
 
 /* =====================================================
-   PUSHY MOBILE MENU — CLEAN SPACING + ALIGNMENT
+   REMOVE SEARCH FEATURE COMPLETELY (ALL DEVICES)
    ===================================================== */
 
-/* remove cramped spacing from container */
-.menu_pushy{
-    padding-top:0 !important;
-}
-
-/* main menu items spacing */
-.menu_pushy .menu_pushy_inner .menu_main_nav > li{
-    padding:16px 0 !important;
-    border-bottom:1px solid rgba(255,255,255,0.06) !important;
-}
-
-/* menu text spacing */
-.menu_pushy .menu_main_nav > li > a{
-    font-size:18px !important;
-    letter-spacing:1px !important;
-    padding:6px 0 !important;
-}
-
-/* arrow alignment */
-.menu_pushy .menu_main_nav > li.menu-item-has-children > a:after{
-    right:0 !important;
-}
-
-/* space between menu and login/register section */
-.menu_pushy .menu_user_nav{
-    margin-top:25px !important;
-    padding-top:10px !important;
-    border-top:1px solid rgba(255,255,255,0.08) !important;
-}
-
-/* login & register spacing */
-.menu_pushy .menu_user_nav li{
-    padding:18px 0 !important;
-}
-
-/* phone + working hours block spacing */
-.menu_pushy .contact_field{
-    margin-top:25px !important;
-    padding-top:20px !important;
-    border-top:1px solid rgba(255,255,255,0.08) !important;
-}
-
-/* bottom social bar spacing */
-.menu_pushy .top_panel_top_socials{
-    margin-top:25px !important;
-}
-
-/* increase side padding so text not touching edge */
-.menu_pushy .menu_pushy_inner{
-    padding-left:28px !important;
-    padding-right:28px !important;
-}
-
-
-/* =====================================================
-   REMOVE SEARCH FROM MOBILE PUSH MENU
-   ===================================================== */
-
-/* hide search menu item */
-.menu_pushy .menu_main_nav li.menu-item-search,
-.menu_pushy .menu_main_nav li.search_wrap,
-.menu_pushy .menu_main_nav li[class*="search"]{
+/* desktop header search */
+.search_wrap,
+.top_panel_icon.search_wrap,
+.search_style_fullscreen{
     display:none !important;
+    width:0 !important;
+    height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+}
+
+/* mobile slide menu search field */
+.menu_mobile .search_wrap,
+.menu_mobile .search_form_wrap,
+.menu_mobile .search_form,
+.menu_mobile .search_field{
+    display:none !important;
+    height:0 !important;
+    padding:0 !important;
+    margin:0 !important;
+}
+
+/* remove space that theme reserved for search */
+.top_panel_middle .top_panel_icon{
+    margin:0 !important;
 }
