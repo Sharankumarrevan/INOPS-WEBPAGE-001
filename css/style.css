@@ -9650,37 +9650,38 @@ body {
     margin:0 12px !important;
 }
 
+/* Fix deployment layout shift: remove forced outer-sidebar page offset */
+.sidebar_outer_left .body_wrap,
+.sidebar_outer_right .body_wrap {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 
-/* =====================================================
-   REVOLUTION SLIDER FULL MOBILE HEIGHT FIX
-   ===================================================== */
-
-@media (max-width:768px){
-
-    /* make slider take full screen height */
-    .rev_slider,
-    .rev_slider_wrapper,
-    .fullscreen-container,
-    .fullwidthbanner-container{
-        height:100vh !important;
-        min-height:100vh !important;
-        max-height:100vh !important;
+/* Keep hamburger and cart icons on the same baseline in mobile header */
+@media (max-width: 768px) {
+    .header_mobile .content_wrap {
+        position: relative;
+        min-height: 64px;
     }
 
-    /* force slide background image to cover */
-    .rev_slider li,
-    .rev_slider .slotholder,
-    .rev_slider .tp-bgimg{
-        height:100vh !important;
-        min-height:100vh !important;
-        background-size:cover !important;
-        background-position:center center !important;
+    .header_mobile .menu_button,
+    .header_mobile .menu_main_cart {
+        top: 50% !important;
+        margin-top: 0 !important;
+        transform: translateY(-50%) !important;
+        height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
     }
 
-    /* remove grey spacing below slider */
-    .rev_slider_wrapper{
-        margin-bottom:0 !important;
-        padding-bottom:0 !important;
+    .header_mobile .menu_main_cart .top_panel_cart_button {
+        display: flex !important;
+        align-items: center !important;
     }
 
+    .header_mobile .menu_button:before,
+    .header_mobile .menu_main_cart .top_panel_cart_button .contact_icon:before {
+        line-height: 1 !important;
+        display: block;
+    }
 }
