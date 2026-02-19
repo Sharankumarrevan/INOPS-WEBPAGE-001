@@ -9444,41 +9444,131 @@ body {
 
 }
 
-/* =====================================
-   HEADER HEIGHT & SPACING FIX
-   (Push slider content below header)
-===================================== */
+/* =====================================================
+   ULTIMATE HEADER HEIGHT OVERRIDE
+   ===================================================== */
 
-/* give header proper height */
-.top_panel_middle {
-    height: 90px !important;
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
+/* kill ALL theme padding + height */
+.top_panel_middle{
+    padding:0 15px !important;
+    height:64px !important;
+    min-height:64px !important;
+    display:flex !important;
+    align-items:center !important;
 }
 
-/* center logo + menu vertically */
-.top_panel_middle .content_wrap {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
+/* remove vertical spacing inside header */
+.top_panel_middle .content_wrap{
+    padding:0 !important;
 }
 
-/* move slider content below header */
-.rev_slider_wrapper {
-    margin-top: 90px !important;
+/* remove huge margins added by theme */
+.top_panel_middle .menu_main_wrap{
+    margin:0 !important;
 }
 
-/* MOBILE VERSION */
+/* vertically center menu items */
+.menu_main_nav > li > a{
+    padding:0 20px !important;
+    height:10px !important;
+    line-height:64px !important;
+}
+
+/* shrink logo perfectly */
+.logo img,
+.top_panel_wrap .logo_main,
+.top_panel_wrap .logo_fixed{
+    max-height:36px !important;
+}
+
+/* =====================================================
+   MOBILE HEADER (FINAL)
+   ===================================================== */
 @media (max-width:768px){
 
-    .top_panel_middle {
-        height: 70px !important;
-        padding-top: 10px !important;
-        padding-bottom: 10px !important;
+    .top_panel_middle{
+        height:56px !important;
+        min-height:56px !important;
+        padding:0 12px !important;
     }
 
-    .rev_slider_wrapper {
-        margin-top: 70px !important;
+    .menu_button,
+    .top_panel_middle .menu_main_cart{
+        margin-top:0 !important;
+    }
+
+    .logo img{
+        max-height:30px !important;
     }
 
 }
+
+
+/* =====================================================
+   SOCIAL + SEARCH ICON SIZE = MENU HEIGHT FIX
+   ===================================================== */
+
+/* shrink giant theme icon boxes (social + search) */
+.top_panel_middle .sc_socials a,
+.top_panel_middle .sc_socials a .sc_socials_hover,
+.top_panel_middle .top_panel_icon.search_wrap{
+    width:30px !important;
+    height:30px !important;
+    line-height:30px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+}
+
+/* remove theme width from search submit button */
+.top_panel_middle .search_wrap .search_submit{
+    position:static !important;
+    width:100% !important;
+    height:100% !important;
+    padding:0 !important;
+    margin:0 !important;
+    line-height:30px !important;
+    text-align:center !important;
+}
+
+/* 3️⃣ Make social icons same size */
+/* .top_panel_middle .sc_socials a{
+    width:40px !important;
+    height:60px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+} */
+
+/* reduce icon font size (social + search) */
+.top_panel_middle .sc_socials .social_icons span,
+.top_panel_middle .top_panel_icon .search_submit:before{
+    font-size:16px !important;
+}
+
+/* vertically align with menu */
+.top_panel_top_socials{
+    display:flex !important;
+    align-items:center !important;
+    height:80px !important;
+    margin-left:18px !important;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+    .top_panel_top_socials{
+        height:56px !important;
+    }
+
+    .top_panel_middle .sc_socials a,
+    .top_panel_middle .top_panel_icon.search_wrap{
+        width:28px !important;
+        height:28px !important;
+        line-height:28px !important;
+    }
+
+}
+
+
+
