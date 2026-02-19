@@ -9624,7 +9624,7 @@ body {
 
 /* fix dropdown arrow alignment */
 .menu_mobile .menu_main_nav > li > a > .open_child_menu{
-    top:60% !important;
+    top:50% !important;
     transform:translateY(-50%) !important;
 }
 
@@ -9650,38 +9650,72 @@ body {
     margin:0 12px !important;
 }
 
-/* Fix deployment layout shift: remove forced outer-sidebar page offset */
-.sidebar_outer_left .body_wrap,
-.sidebar_outer_right .body_wrap {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+/* =====================================================
+   FORCE PERFECT HEADER VERTICAL ALIGNMENT
+   (menu = logo = icons same center line)
+   ===================================================== */
+
+/* kill theme floats that cause vertical shift */
+/* .top_panel_style_2 .menu_main_wrap,
+.top_panel_style_3 .menu_main_wrap,
+.top_panel_style_7 .menu_main_wrap{
+    float:none !important;
+} */
+
+/* make header real flex container */
+/* .top_panel_middle .content_wrap{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+} */
+
+/* remove hidden vertical margins */
+.top_panel_middle .menu_main_wrap{
+    margin:0 !important;
+    padding:0 !important;
+    display:flex !important;
+    align-items:center !important;
 }
 
-/* Keep hamburger and cart icons on the same baseline in mobile header */
-@media (max-width: 768px) {
-    .header_mobile .content_wrap {
-        position: relative;
-        min-height: 64px;
-    }
+/* make navigation flex so links center perfectly */
+.menu_main_nav_area{
+    display:flex !important;
+    align-items:center !important;
+}
 
-    .header_mobile .menu_button,
-    .header_mobile .menu_main_cart {
-        top: 50% !important;
-        margin-top: 0 !important;
-        transform: translateY(-50%) !important;
-        height: 44px !important;
-        display: flex !important;
-        align-items: center !important;
-    }
+/* center each menu item vertically */
+.menu_main_nav{
+    display:flex !important;
+    align-items:center !important;
+}
 
-    .header_mobile .menu_main_cart .top_panel_cart_button {
-        display: flex !important;
-        align-items: center !important;
-    }
+/* THIS fixes the main issue: theme uses line-height trick */
+.menu_main_nav > li > a{
+    height:64px !important;
+    line-height:64px !important;
+    display:flex !important;
+    align-items:center !important;
+}
 
-    .header_mobile .menu_button:before,
-    .header_mobile .menu_main_cart .top_panel_cart_button .contact_icon:before {
-        line-height: 1 !important;
-        display: block;
+/* center right side icons */
+/* .top_panel_middle .menu_main_cart,
+.menu_button,
+.top_panel_top_socials{
+    display:flex !important;
+    align-items:center !important;
+    height:64px !important;
+} */
+
+
+
+/* mobile height sync */
+@media(max-width:768px){
+    .menu_main_nav > li > a,
+    .top_panel_middle .menu_main_cart,
+    .menu_button,
+    .top_panel_top_socials,
+    .logo{
+        height:56px !important;
+        line-height:56px !important;
     }
 }
