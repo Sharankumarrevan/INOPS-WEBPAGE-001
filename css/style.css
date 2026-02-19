@@ -9571,4 +9571,20 @@ body {
 }
 
 
+/* =====================================================
+   REMOVE SEARCH FROM MOBILE SLIDE MENU
+   ===================================================== */
+
+/* hide mobile search field */
+.menu_mobile .search_wrap,
+.menu_mobile .search_mobile,
+.menu_mobile .search_form,
+.menu_mobile .top_panel_icon.search_wrap{
+    display:none !important;
+}
+
+/* remove empty grey search space */
+.menu_mobile .menu_mobile_inner{
+    padding-top:0 !important;
+}
 
