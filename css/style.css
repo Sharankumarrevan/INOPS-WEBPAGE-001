@@ -9627,3 +9627,13 @@ body {
 }
 
 
+/* =====================================================
+   REMOVE SEARCH FROM MOBILE PUSH MENU
+   ===================================================== */
+
+/* hide search menu item */
+.menu_pushy .menu_main_nav li.menu-item-search,
+.menu_pushy .menu_main_nav li.search_wrap,
+.menu_pushy .menu_main_nav li[class*="search"]{
+    display:none !important;
+}
