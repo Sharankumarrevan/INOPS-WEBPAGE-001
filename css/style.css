@@ -2353,15 +2353,18 @@ body:not(.top_panel_fixed) .top_panel_style_3.boxed_style .top_panel_middle {
     display: block;
     padding: 0.65em 1.5em;
 }
+.menu_main_nav>li+li>a {
+    position: relative;
+}
+
 .menu_main_nav>li+li>a:before {
     content: '/';
-    font-family: 'fontello';
-    font-size: 1.2em;
-    font-style: italic;
-    left: -2px;
     position: absolute;
-    top: 1.45em;
-    color: #ffffff;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-48%);
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
 }
 .menu_main_nav>li.menu-item-has-children>a:after {}.top_panel_wrap li li.menu-item-has-children>a:after {
     content: '\e836';
@@ -9719,3 +9722,4 @@ body {
         line-height:56px !important;
     }
 }
+
